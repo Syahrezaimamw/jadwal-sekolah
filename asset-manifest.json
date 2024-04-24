@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jadwal-sekolah/static/css/main.1d8c9647.css",
+    "main.js": "/jadwal-sekolah/static/js/main.117c2a30.js",
+    "index.html": "/jadwal-sekolah/index.html",
+    "main.1d8c9647.css.map": "/jadwal-sekolah/static/css/main.1d8c9647.css.map",
+    "main.117c2a30.js.map": "/jadwal-sekolah/static/js/main.117c2a30.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d8c9647.css",
+    "static/js/main.117c2a30.js"
+  ]
+}
