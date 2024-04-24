@@ -10,11 +10,11 @@ import { Home } from './Home';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/jadwal-sekolah/",
     element: <App/>
   },
   {
-    path: "/home",
+    path: "/jadwal-sekolah/home",
     element: <Home/>
   },
 ]);
