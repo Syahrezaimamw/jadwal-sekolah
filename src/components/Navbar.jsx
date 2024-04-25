@@ -29,7 +29,7 @@ export const Navbar = () => {
 
         <div className='flex flex-col-reverse lg:flex-col'>
             <div className='flex  items-center justify-center cursor-pointer bg-[rgb(244,244,245)] w-full group py-4'>
-                <div className='flex flex-wrap px-8 items-center gap-2 md:gap-5 text-[rgb(63,67,75)] font-semibold text-[15px]'>Beasiswa coding GRATIS selama 1 tahun, Ikuti DBS Foundation Coding Camp 2024! <p className='flex items-center gap-3  text-[rgb(26,119,215)]'>LIhat di sini <FaArrowRight className='duration-500 group-hover:translate-x-4' /></p></div>
+                <div className='flex flex-wrap px-8 items-center gap-2 md:gap-5 text-[rgb(63,67,75)] font-semibold text-[15px]'>Kelas terbaik dan paling produktif menciptakan keunggulan 2024!<p className='flex items-center gap-3  text-[rgb(26,119,215)]'>LIhat di sini <FaArrowRight className='duration-500 group-hover:translate-x-4' /></p></div>
             </div>
             <div className='sticky  top-0 px-8 xl:px-5 flex items-center justify-between w-full lg:max-w-[1450px] py-4 lg:py-3 m-auto'>
                 <div className='flex items-center justify-between gap-5'>
