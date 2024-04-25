@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/jadwal-sekolah/static/css/main.7f1a57c9.css",
-    "main.js": "/jadwal-sekolah/static/js/main.576c6b29.js",
+    "main.css": "/jadwal-sekolah/static/css/main.1312abab.css",
+    "main.js": "/jadwal-sekolah/static/js/main.826356c0.js",
     "static/media/letris.jpg": "/jadwal-sekolah/static/media/letris.f0dab9a7feeeba2830ae.jpg",
     "index.html": "/jadwal-sekolah/index.html",
-    "main.7f1a57c9.css.map": "/jadwal-sekolah/static/css/main.7f1a57c9.css.map",
-    "main.576c6b29.js.map": "/jadwal-sekolah/static/js/main.576c6b29.js.map"
+    "main.1312abab.css.map": "/jadwal-sekolah/static/css/main.1312abab.css.map",
+    "main.826356c0.js.map": "/jadwal-sekolah/static/js/main.826356c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f1a57c9.css",
-    "static/js/main.576c6b29.js"
+    "static/css/main.1312abab.css",
+    "static/js/main.826356c0.js"
   ]
 }
