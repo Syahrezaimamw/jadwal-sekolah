@@ -52,10 +52,10 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                     }
                 </ul>
                 {/* bg-[rgb(244,244,245)] */}
-                <div className='px-3  bg-navy pb-10 min-h-[70dvh] mt-[70px]'>
+                <div className='px-3 bg-[rgb(244,244,245)]  dark:bg-navy pb-10 min-h-[70dvh] mt-[70px]'>
                     <div className='relative w-full bg-red-900  top-[-25px] h-[20px]'>
 
-                        <div onClick={() => dataSelect(dataPer)} className='absolute w-full flex justify-between items-center px-3 bg-red-900 dark:bg-navy t-0 l-0 h-[50px] text-white'>
+                        <div onClick={() => dataSelect(dataPer)} className='absolute w-full flex justify-between items-center px-3 bg-red-900  t-0 l-0 h-[50px] text-white'>
                             <h1 className='text-xl font-bold'>{dataPer ? dataPer.hari.toUpperCase() : '...'}</h1>
                             <p className='text-end'>{newdate}</p>
                         </div>
@@ -66,7 +66,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                                 dataPer.jadwal.map((a, i) => (
 
 
-                                    <div key={i} className={`relative flex justify-center w-full py-2 mb-1 font-semibold group  ${a.mapel=='istirahat'?'bg-red-200 dark:bg-yellow-100':'bg-indigo-200  dark:bg-blue-200'} items-center`}>
+                                    <div key={i} className={`relative flex justify-center w-full py-2 mb-1 font-semibold group  ${a.mapel=='istirahat'?'bg-red-200 dark:bg-red-200':'bg-indigo-200  dark:bg-neutral-100'} items-center`}>
                                         <h1 className={`${a.pr.status ? 'text-red-500' : ''}`}>
 
                                             {a.mapel.toUpperCase()}
