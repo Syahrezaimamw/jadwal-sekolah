@@ -24,7 +24,7 @@ export const Navbar = () => {
                 return a.hari.toLowerCase().includes(searchvalue)
             })
             setData(result)
-    })
+    },[])
         
     },[searchvalue])
     return (

@@ -5,9 +5,11 @@ import { Perjadwalmobile } from './Perjadwalmobile';
 import Modaladdpr from '../components/Modaladdpr';
 import { tanggal } from '../service/tanggal';
 import { ModalData } from '../components/ModalData';
+import Skeleton from 'react-loading-skeleton'
+
 export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal, setshowprmodal, dataaddpr, setDataaddpr
 }) => {
-    const [data, setData] = useState([])
+    const [data, setData] = useState()
     useEffect(() => {
 
         getJadwalApi((data) => setData(data))
@@ -37,11 +39,16 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                 <ul className='sticky top-0 z-10 flex items-center justify-between w-full gap-0 px-3 mt-2 overflow-x-scroll bg-white'>
 
                     {
+                        data?
                         data.map((a, i) => (
                             <li key={i} className='relative px-1 py-2 text-lg font-semibold ' onClick={() => gantiHari(a.id)}>{a.hari}
                             <span className={` w-full h-[3px]  absolute left-0 bottom-0  ${i+1 == hari ?'bg-red-900':'bbg-transparent'}`}></span>
                             
-                            </li>))
+                            </li>)):
+                            <div className='bg-gray-100 w-full h-[40px] flex justify-center items-center '>
+                                tungu lagi loading
+                            {/* dsdada */}
+                            </div>
                     }
                 </ul>
                 <div className='px-3 bg-neutral-100 mt-[70px]'>
@@ -70,8 +77,8 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                                                 </div>
                                                 : ''
                                         }
-                                    </div>
-                                )) : <></>
+                                    </div> 
+                                )) : <><Skeleton count={9} className='h-[40px] mt-2' /></>
                         }
                     </div>
                 </div>

@@ -4,6 +4,8 @@ import { Modal } from './components/Modal';
 import { Navbar } from './components/Navbar';
 import { Jadwal2 } from './main/Jadwal2';
 import { JadwalMobile } from './main/JadwalMobile';
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 function App() {
 

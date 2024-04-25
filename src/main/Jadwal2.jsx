@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { ModalData } from '../components/ModalData'
 import Modaladdpr from '../components/Modaladdpr'
 import { getJadwalApi } from '../service/getJadwalApi'
+import { TableSekelaton } from '../components/TableSekelaton'
 export const Jadwal2 = ({  modal,  setModal,dataModal,setDataModal,prModal,setshowprmodal,dataaddpr,setDataaddpr
 }) => {
-    const [data, setData] = useState([])
+    const [data, setData] = useState()
     useEffect(() => {
         getJadwalApi((data)=>setData(data))
     }, [])
@@ -19,6 +20,7 @@ export const Jadwal2 = ({  modal,  setModal,dataModal,setDataModal,prModal,setsh
             <div className='m-auto hidden sm:block  max-w-[1450px] px-8  mt-10'>
                 <div className='flex '>
                     {
+                        data?
                         data.map((a, i) => (
                             <div key={i} className='w-[calc(100%/5)]'>
                                 <h1 onClick={() => dataSelect(a)} className='flex items-center justify-center px-8 py-3 font-bold bg-[rgb(45,62,80)]  text-white border-r-2  border-y-2 jis justiy'>
@@ -40,7 +42,7 @@ export const Jadwal2 = ({  modal,  setModal,dataModal,setDataModal,prModal,setsh
                                 </div>
                             </div>
 
-                        ))
+                        )):<TableSekelaton/>
                     }
                 </div>
                 {
