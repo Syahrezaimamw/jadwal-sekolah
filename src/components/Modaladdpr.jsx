@@ -26,16 +26,16 @@ const Modaladdpr = ({dataaddpr, setshowprmodal}) => {
   >
     <div className="relative w-full max-w-md max-h-full p-4">
       {/* Modal content */}
-      <div className="relative bg-white shadow dark:bg-gray-700">
+      <div className="relative bg-white shadow ">
         {/* Modal header */}
-        <div className="flex items-center justify-between p-4 border-b rounded-t md:p-5 dark:border-gray-600">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+        <div className="flex items-center justify-between p-4 border-b rounded-t md:p-5 ">
+          <h3 className="text-xl font-semibold text-gray-900 ">
             Ya elah pr lagi aja
           </h3>
           <button
           onClick={()=>setshowprmodal(false)}
             type="button"
-            className="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            className="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center  "
           >
           <FaX/>
           </button>
@@ -62,7 +62,7 @@ const Modaladdpr = ({dataaddpr, setshowprmodal}) => {
             <div>
               <label
                 htmlFor="desk"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900 "
               >
                 Add Desk
               </label>
@@ -72,8 +72,7 @@ const Modaladdpr = ({dataaddpr, setshowprmodal}) => {
                 onChange={(e)=>handleChange(e.target.value)}
                 id="desk"
                 placeholder="Beri deskripsi secara jelas"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                required=""
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
               />
             </div>
          

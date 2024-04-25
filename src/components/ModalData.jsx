@@ -23,16 +23,16 @@ export const ModalData = ({ setModal, dataModal, setshowprmodal,setDataaddpr}) =
     >
       <div className="relative w-full max-w-2xl max-h-full p-4">
         {/* Modal content */}
-        <div className="relative bg-white shadow dark:bg-gray-700">
+        <div className="relative bg-white shadow ">
           {/* Modal header */}
-          <div className="flex items-center justify-between p-4 border-b rounded-t md:p-5 dark:border-gray-600">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+          <div className="flex items-center justify-between p-4 border-b rounded-t md:p-5">
+            <h3 className="text-xl font-semibold text-gray-900">
               {dataModal.hari}
             </h3>
             <button
               type="button"
               onClick={() => setModal(false)}
-              className="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto dark:hover:bg-gray-600 dark:hover:text-white"
+              className="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto"
             >
               <FaX />
             </button>
@@ -61,7 +61,7 @@ export const ModalData = ({ setModal, dataModal, setshowprmodal,setDataaddpr}) =
 
           </div>
           {/* Modal footer */}
-          <div className="flex items-center gap-3 p-4 border-t border-gray-200 rounded-b md:p-5 dark:border-gray-600">
+          <div className="flex items-center gap-3 p-4 border-t border-gray-200 rounded-b md:p-5">
             <Button>Masuk</Button>
             <Button type={true}>Daftar</Button>
           </div>

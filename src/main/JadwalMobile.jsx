@@ -36,7 +36,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
 
                     {
                         data.map((a, i) => (
-                            <li key={i} className='px-3 py-2 ' onClick={() => gantiHari(a.id)}>{a.hari}</li>))
+                            <li key={i} className='px-3 py-2 text-lg font-semibold ' onClick={() => gantiHari(a.id)}>{a.hari}</li>))
                     }
                 </ul>
                 <div className='px-3 bg-neutral-100 mt-[70px]'>
