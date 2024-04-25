@@ -65,7 +65,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                                         </h1>
                                         {
                                             a.pr.status ?
-                                                <div className='absolute top-0 hidden px-4 py-1 text-white bg-black group-hover:block'>
+                                                <div className='absolute top-0 hidden px-4 py-1 text-white bg-[rgb(45,62,80)] group-hover:block'>
                                                     {a.pr.desk}
                                                 </div>
                                                 : ''

@@ -17,5 +17,8 @@
 }
 
 #bs{
-	box-shadow: 0px 0px 10px gray;
+	/* box-shadow: 0px 0px 10px gray; */
+}
+#bgd{
+	background-color: rgba(0,0,0,0.3);
 }
