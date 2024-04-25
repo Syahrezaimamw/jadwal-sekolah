@@ -13,7 +13,9 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
         getJadwalApi((data) => setData(data))
     }, [])
     const [dataPer, setDataPer] = useState();
-    const [hari, setHari] = useState(3);
+    let date = new Date();
+    let hariini = date.getDay();
+    const [hari, setHari] = useState(hariini);
     const newdate = tanggal()
 
     function gantiHari(id) {
@@ -31,19 +33,22 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
     }
     return (
         <>
-            <div className='relative w-full sm:hidden '>
-                <ul className='sticky top-0 z-10 flex items-center justify-between w-full gap-3 px-3 mt-2 overflow-x-scroll bg-white'>
+            <div className='relative w-full pb-10 sm:hidden'>
+                <ul className='sticky top-0 z-10 flex items-center justify-between w-full gap-0 px-3 mt-2 overflow-x-scroll bg-white'>
 
                     {
                         data.map((a, i) => (
-                            <li key={i} className='px-3 py-2 text-lg font-semibold ' onClick={() => gantiHari(a.id)}>{a.hari}</li>))
+                            <li key={i} className='relative px-1 py-2 text-lg font-semibold ' onClick={() => gantiHari(a.id)}>{a.hari}
+                            <span className={` w-full h-[3px]  absolute left-0 bottom-0  ${i+1 == hari ?'bg-red-900':'bbg-transparent'}`}></span>
+                            
+                            </li>))
                     }
                 </ul>
                 <div className='px-3 bg-neutral-100 mt-[70px]'>
                     <div className='relative w-full bg-red-900 top-[-25px] h-[20px]'>
 
                         <div onClick={() => dataSelect(dataPer)} className='absolute w-full flex justify-between items-center px-3 bg-red-900 t-0 l-0 h-[50px] text-white'>
-                            <h1 className='text-xl font-bold'>{dataPer ? dataPer.hari : ''}</h1>
+                            <h1 className='text-xl font-bold'>{dataPer ? dataPer.hari : '...'}</h1>
                             <p>{newdate}</p>
                         </div>
                     </div>
@@ -53,7 +58,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                                 dataPer.jadwal.map((a, i) => (
 
 
-                                    <div key={i} className='relative flex justify-center w-full py-2 mb-1 font-semibold bg-indigo-200 group -items-center'>
+                                    <div key={i} className={`relative flex justify-center w-full py-2 mb-1 font-semibold group ${a.mapel=='istirahat'?'bg-red-200':'bg-indigo-200 '} items-center`}>
                                         <h1 className={`${a.pr.status ? 'text-red-500' : ''}`}>
 
                                             {a.mapel.toUpperCase()}
@@ -69,9 +74,6 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                                 )) : <></>
                         }
                     </div>
-                </div>
-
-                <div className='h-[200vh]'>
                 </div>
                 {
                     modal ?

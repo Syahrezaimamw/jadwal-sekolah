@@ -38,7 +38,7 @@ export const Navbar = () => {
             </div>
             <div className='static px-3 sm:px-8 xl:px-5 flex items-center justify-between w-full lg:max-w-[1450px] py-4 lg:py-3 m-auto'>
                 <div className='flex items-center justify-between gap-5'>
-                    <img src={Logo} alt="logo" className='w-[35px]' />
+                    <img src={Logo} alt="logo" className='w-[40px]' />
                     <div className='hidden lg:block'>
                         <Filtersearch
                         
@@ -58,7 +58,7 @@ export const Navbar = () => {
                     <Button >Masuk</Button>
                     <Button type={true}> Daftar</Button>
                 </div>
-                <FaBars className='lg:hidden' onClick={() => {
+                <FaBars className='text-xl lg:hidden' onClick={() => {
                     show ? setShow(false) : setShow(true)
                 }}></FaBars>
             </div>

@@ -26,7 +26,7 @@ const Modaladdpr = ({dataaddpr, setshowprmodal}) => {
   >
     <div className="relative w-full max-w-md max-h-full p-4">
       {/* Modal content */}
-      <div className="relative bg-white shadow ">
+      <div className="relative bg-white shadow " id='bs'>
         {/* Modal header */}
         <div className="flex items-center justify-between p-4 border-b rounded-t md:p-5 ">
           <h3 className="text-xl font-semibold text-gray-900 ">
