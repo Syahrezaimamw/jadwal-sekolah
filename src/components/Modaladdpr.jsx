@@ -30,7 +30,7 @@ const Modaladdpr = ({dataaddpr, setshowprmodal}) => {
         {/* Modal header */}
         <div className="flex items-center justify-between p-4 border-b rounded-t md:p-5 ">
           <h3 className="text-xl font-semibold text-gray-900 ">
-            Ya elah pr lagi aja
+            YA ELAH ADA PR LAGI
           </h3>
           <button
           onClick={()=>setshowprmodal(false)}
@@ -64,7 +64,7 @@ const Modaladdpr = ({dataaddpr, setshowprmodal}) => {
                 htmlFor="desk"
                 className="block mb-2 text-sm font-medium text-gray-900 "
               >
-                Add Desk
+                Tambah deskripsi PR
               </label>
               <input
                 type="text"

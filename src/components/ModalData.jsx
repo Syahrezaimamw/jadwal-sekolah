@@ -28,7 +28,7 @@ export const ModalData = ({ setModal, dataModal, setshowprmodal,setDataaddpr}) =
           {/* Modal header */}
           <div className="flex items-center justify-between p-4 border-b rounded-t md:p-5">
             <h3 className="text-xl font-semibold text-gray-900">
-              {dataModal.hari}
+              {dataModal.hari.toUpperCase()}
             </h3>
             <button
               type="button"
@@ -39,10 +39,10 @@ export const ModalData = ({ setModal, dataModal, setshowprmodal,setDataaddpr}) =
             </button>
           </div>
           {/* Modal body */}
-          <div className="py-4 space-y-4  md:p-5 h-[260px]  overflow-y-scroll" id='style-4'>
+          <div className="py-4 space-y-4  md:p-5 h-[280px]  overflow-y-scroll" id='style-4'>
             {dataModal.jadwal.map((a, i) => (
               <div key={i} className='flex items-start justify-between w-full px-3 py-1 cursor-pointer '>
-                <h1 className='font-semibold '>{a.mapel} <span className='font-normal ms-3'>({a.jam})</span></h1>
+                <h1 className='font-semibold '>{a.mapel.toUpperCase()} <span className='font-normal ms-3'>({a.jam})</span></h1>
                 <div className='flex items-center justify-between gap-2'>
                   {
                     a.pr.status ?

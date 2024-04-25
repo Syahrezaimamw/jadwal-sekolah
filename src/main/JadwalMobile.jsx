@@ -51,11 +51,12 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                             </div>
                     }
                 </ul>
-                <div className='px-3 bg-[rgb(244,244,245)] pb-10 mt-[70px]'>
+                {/* bg-[rgb(244,244,245)] */}
+                <div className='px-3  bg-navy pb-10 min-h-[70dvh] mt-[70px]'>
                     <div className='relative w-full bg-red-900  top-[-25px] h-[20px]'>
 
                         <div onClick={() => dataSelect(dataPer)} className='absolute w-full flex justify-between items-center px-3 bg-red-900 dark:bg-navy t-0 l-0 h-[50px] text-white'>
-                            <h1 className='text-xl font-bold'>{dataPer ? dataPer.hari : '...'}</h1>
+                            <h1 className='text-xl font-bold'>{dataPer ? dataPer.hari.toUpperCase() : '...'}</h1>
                             <p className='text-end'>{newdate}</p>
                         </div>
                     </div>
