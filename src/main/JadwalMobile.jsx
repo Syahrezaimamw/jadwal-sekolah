@@ -35,7 +35,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
     }
     return (
         <>
-            <div className='relative w-full pb-10 sm:hidden'>
+            <div className='relative w-full sm:hidden'>
                 <ul className='sticky top-0 z-10 flex items-center justify-between w-full gap-0 px-3 mt-2 overflow-x-scroll bg-white'>
 
                     {
@@ -46,17 +46,17 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                             
                             </li>)):
                             <div className='bg-gray-100 w-full h-[40px] flex justify-center items-center '>
-                                tungu lagi loading
+                                tunggu lagi loading
                             {/* dsdada */}
                             </div>
                     }
                 </ul>
-                <div className='px-3 bg-neutral-100 mt-[70px]'>
-                    <div className='relative w-full bg-red-900 top-[-25px] h-[20px]'>
+                <div className='px-3 bg-[rgb(244,244,245)] pb-10 mt-[70px]'>
+                    <div className='relative w-full bg-red-900  top-[-25px] h-[20px]'>
 
-                        <div onClick={() => dataSelect(dataPer)} className='absolute w-full flex justify-between items-center px-3 bg-red-900 t-0 l-0 h-[50px] text-white'>
+                        <div onClick={() => dataSelect(dataPer)} className='absolute w-full flex justify-between items-center px-3 bg-red-900 dark:bg-navy t-0 l-0 h-[50px] text-white'>
                             <h1 className='text-xl font-bold'>{dataPer ? dataPer.hari : '...'}</h1>
-                            <p>{newdate}</p>
+                            <p className='text-end'>{newdate}</p>
                         </div>
                     </div>
                     <div className='mt-3'>
@@ -65,7 +65,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                                 dataPer.jadwal.map((a, i) => (
 
 
-                                    <div key={i} className={`relative flex justify-center w-full py-2 mb-1 font-semibold group ${a.mapel=='istirahat'?'bg-red-200':'bg-indigo-200 '} items-center`}>
+                                    <div key={i} className={`relative flex justify-center w-full py-2 mb-1 font-semibold group  ${a.mapel=='istirahat'?'bg-red-200 dark:bg-yellow-100':'bg-indigo-200  dark:bg-blue-200'} items-center`}>
                                         <h1 className={`${a.pr.status ? 'text-red-500' : ''}`}>
 
                                             {a.mapel.toUpperCase()}

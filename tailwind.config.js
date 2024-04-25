@@ -2,8 +2,14 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-  ],  theme: {
-    extend: {},
+  ], 
+  darkMode:'class',
+  theme: {
+    extend: {
+      colors:{
+        'navy':'#00004d'
+      }
+    },
   },
   plugins: [],
 }
