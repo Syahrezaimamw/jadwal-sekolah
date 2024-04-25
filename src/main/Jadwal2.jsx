@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { ModalData } from '../components/ModalData'
 import Modaladdpr from '../components/Modaladdpr'
-
-export const Jadwal2 = () => {
+import { getJadwalApi } from '../service/getJadwalApi'
+export const Jadwal2 = ({  modal,  setModal,dataModal,setDataModal,prModal,setshowprmodal,dataaddpr,setDataaddpr
+}) => {
     const [data, setData] = useState([])
     useEffect(() => {
-        fetch('https://65557ea384b36e3a431dce2b.mockapi.io/mapel')
-            .then(res => res.json())
-            .then(res => setData(res))
+        getJadwalApi((data)=>setData(data))
     }, [])
-    const [modal, setModal] = useState(false)
-    const [dataModal, setDataModal] = useState({})
+  
     function dataSelect(data) {
         setDataModal(data)
         setModal(true)
     }
-    const [prModal, setshowprmodal] = useState(false)
-
-    const [dataaddpr,setDataaddpr]=useState({})
+    
     return (
         <>
-            <div className='m-auto max-w-[1450px] px-8  mt-10'>
+            <div className='m-auto hidden sm:block  max-w-[1450px] px-8  mt-10'>
                 <div className='flex '>
                     {
                         data.map((a, i) => (

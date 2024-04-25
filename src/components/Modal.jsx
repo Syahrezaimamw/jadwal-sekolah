@@ -8,7 +8,7 @@ import { Button } from './Button';
 export const Modal = () => {
     const sw = useContext(Appcontex)
   return (
-    <div className={`fixed ${sw.show? 'block':'hidden'} lg:hidden top-0 left-0 w-full h-full bg-white`}>
+    <div className={`fixed ${sw.show? 'block':'hidden'} z-50 lg:hidden top-0 left-0 w-full h-full bg-white`}>
         <div className='flex items-center justify-between w-full px-8 py-5'>
         <Filtersearch></Filtersearch>
             

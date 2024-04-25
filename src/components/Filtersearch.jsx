@@ -4,10 +4,9 @@ import { FaAngleRight } from "react-icons/fa6";
 import { NavContex } from '../contex/Navcontex';
 import { FaMagnifyingGlass } from "react-icons/fa6";
 export const Filtersearch = () => {
-    const { data, searchvalue, err, handleChange } = useContext(NavContex)
-
+    const { data, searchvalue, handleChange } = useContext(NavContex)
     return (
-        <div className="relative flex w-[80%] lg:w-[100%] items-center gap-3 px-5 py-2 border-2 border-solid lg:flex group border-neutral-200">
+        <div className="relative z-[99] flex w-[80%] lg:w-[100%] items-center gap-3 px-5 py-2 border-2 border-solid lg:flex group border-neutral-200">
             <FaMagnifyingGlass className='text-xl text-gray-500' />
             <input
 
@@ -27,14 +26,18 @@ export const Filtersearch = () => {
                         <div className='w-full overflow-y-scroll  h-[150px]' id='style-4'>
                             <ul className='flex flex-col w-full gap-3 px-4 pt-3 pb-3'>
                                 {
-                                    err == false ?
+                                    data.length > 0 ?
                                         data.map((a, i) => {
                                             if (i >= 0) {
 
                                                 return (
 
-                                                    <li key={i} className='px-4 py-2 border-2 border-neutral-200'>{a.strMeal}</li>
+                                                    <li key={i} className='px-4 py-2 border-2 border-neutral-200'>{a.hari}</li>
                                                 )
+                                            }else if(i == 0){
+                                                <div className='flex items-center justify-center w-full h-[120px] '>
+                                            <h1 className='text-[15px]'>Kelas yang anda cari tidak ditemukan</h1>
+                                        </div>
                                             }
                                         }) : <div className='flex items-center justify-center w-full h-[120px] '>
                                             <h1 className='text-[15px]'>Kelas yang anda cari tidak ditemukan</h1>

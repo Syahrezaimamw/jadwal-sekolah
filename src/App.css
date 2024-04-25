@@ -6,13 +6,13 @@
 
 #style-4::-webkit-scrollbar
 {
-	width: 1px;
+	width: 0px;
 	background-color: #F5F5F5;
 }
 
 #style-4::-webkit-scrollbar-thumb
 {
 	background-color: #000000;
-	border: 2px solid #555555;
+	border: 0px solid #555555;
 }
 
