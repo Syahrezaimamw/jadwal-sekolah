@@ -17,7 +17,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
     const [dataPer, setDataPer] = useState();
     let date = new Date();
     let hariini = date.getDay();
-    const [hari, setHari] = useState(hariini);
+    const [hari, setHari] = useState(hariini== 0 || hariini == 6 || hariini == 7 ? 1 : hariini);
     const newdate = tanggal()
 
     function gantiHari(id) {
@@ -36,6 +36,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
     return (
         <>
             <div className='relative w-full sm:hidden'>
+                {/* ss */}
                 <ul className='sticky top-0 z-10 flex items-center justify-between w-full gap-0 px-3 mt-2 overflow-x-scroll bg-white'>
 
                     {
@@ -56,7 +57,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                     <div className='relative w-full bg-red-900  top-[-25px] h-[20px]'>
 
                         <div onClick={() => dataSelect(dataPer)} className='absolute w-full flex justify-between items-center px-3 bg-red-900  t-0 l-0 h-[50px] text-white'>
-                            <h1 className='text-xl font-bold'>{dataPer ? dataPer.hari.toUpperCase() : '...'}</h1>
+                            <h1 className='text-xl font-bold'>{dataPer ? dataPer.hari : '...'}</h1>
                             <p className='text-end'>{newdate}</p>
                         </div>
                     </div>
