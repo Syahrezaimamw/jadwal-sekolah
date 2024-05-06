@@ -6,7 +6,7 @@ import Modaladdpr from '../components/Modaladdpr';
 import { tanggal } from '../service/tanggal';
 import { ModalData } from '../components/ModalData';
 import Skeleton from 'react-loading-skeleton'
-
+import Loading from '../components/Loading';
 export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal, setshowprmodal, dataaddpr, setDataaddpr
 }) => {
     const [data, setData] = useState()
@@ -21,7 +21,12 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
     const newdate = tanggal()
 
     function gantiHari(id) {
-        setHari(id)
+        // setHari([])
+        setDataPer()
+        setTimeout(()=>{
+            setHari(id)
+            console.log('selesai')
+        },1000)
     }
     useEffect(() => {
         fetch('https://65557ea384b36e3a431dce2b.mockapi.io/mapel/' + hari)
@@ -48,6 +53,7 @@ export const JadwalMobile = ({ modal, setModal, dataModal, setDataModal, prModal
                             </li>)):
                             <div className='bg-gray-100 w-full h-[40px] flex justify-center items-center '>
                                 tunggu lagi loading
+                                <Loading/>
                             {/* dsdada */}
                             </div>
                     }
